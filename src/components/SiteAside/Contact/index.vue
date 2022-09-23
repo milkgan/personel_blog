@@ -32,12 +32,13 @@ export default {
 </script>
 
 <style lang="less" scoped>
-    @import "~@/styles/globel.less";
+    @import "~@/styles/global.less";
     .contact-container {
         margin: 0;
         padding: 0;
         list-style: none;
         color: @lightWords;
+        font-size: 14px;
         li {
             margin: 2px 0;
             display: flex;
@@ -53,10 +54,9 @@ export default {
         }
     }
     .icon-container {
-        font-size: 28px;
+        font-size: 26px;
         margin-right: 10px;
         margin-left: 20px;
-
     }
 
 </style>

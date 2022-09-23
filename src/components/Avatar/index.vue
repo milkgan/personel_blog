@@ -26,5 +26,6 @@ export default {
 
 <style lang="less" scoped>
 .avatar-container {
+  border-radius: 50%;
 }
 </style>
