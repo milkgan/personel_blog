@@ -1,10 +1,13 @@
 <template>
   <div class="test-container">
     <Layout>
-      <template slot="left">
+      <!-- <template slot="left">
         <SiteAside />
-      </template>
+      </template> -->
       <router-view></router-view>
+      <!-- <template slot="right">
+        <div>123</div>
+      </template> -->
     </Layout>
   </div>
 </template>
@@ -13,11 +16,11 @@
 // 布局组件
 import Layout from "@/components/Layout";
 // 网站侧边栏组件
-import SiteAside from "@/components/SiteAside";
+// import SiteAside from "@/components/SiteAside";
 export default {
   components: {
     Layout,
-    SiteAside,
+    // SiteAside,
   },
 };
 </script>
@@ -30,7 +33,6 @@ body {
   height: 100%;
 }
 .test-container {
-  width: 260px;
   height: 100%;
 }
 </style>
