@@ -1,38 +1,31 @@
 <template>
     <div class="home-container" ref="container">
-        <!-- <div @click="test">首页</div> -->
-        <!-- <div class="message message-info">
-            <span class="icon">
-                <Icon :type="'success'"/>
-            </span>
-            <div>测试测试测试</div>
-        </div> -->
+        <!-- 轮播图 -->
         <ul class="carousel" :style="{marginTop}">
             <li v-for="item in banners" :key="item.id">
                 <Carouselitem :carousel="item"/>
             </li>
         </ul>
+        <!-- 向上箭头 -->
         <div v-show="index > 0" class="arrow-up" @click="switchTo(index - 1)" >
             <Icon type="arrowUp"/>
         </div>
+        <!-- 向下箭头 -->
         <div v-show="index < banners.length - 1" class="arrow-down" @click="switchTo(index + 1)">
             <Icon type="arrowDown"/>
         </div>
+        <!-- 标志点 -->
         <ul class="carousel-dots">
             <li v-for="(item, i) in banners" :key="item.id" :class="{active: i === index}" @click="switchTo(i)"></li>
         </ul>
-
-        
     </div>
     
 </template>
 
 <script>
-// import axios from "axios";
 import {getBanners} from "@/api/banner";
 import Icon from "@/components/Icon";
 import Carouselitem from '@/views/Home/Carouselitem';
-// import showMessage from '@/utils/showMessage';
 
 export default {
     components: {
@@ -46,16 +39,15 @@ export default {
             containerHeight: 0 // home-container整个容器高度
         }
     },
+    /* 获取轮播图对象数组 */
     async created() {
         this.banners = await getBanners();
-        console.log(this.banners)
     },
     mounted() {
         this.containerHeight = this.$refs.container.clientHeight;
-        console.log(this.$refs.container.clientHeight)
     },
     computed: {
-        // carousel移动距离
+        /* 轮播图移动距离 */
         marginTop() {
             return -(this.index * this.containerHeight) + 'px';
         }
@@ -70,21 +62,14 @@ export default {
 </script>
 
 <style lang="less" scoped>
-// @import "~@/styles/mixin.less";
 @import "~@/styles/var.less";
-// .home-container {
-//     border: 1px solid #000;
-//     margin: 100px;
-//     height: 400px;
-//     position: relative;
-// }
 
 // 整个容器
 .home-container {
-    margin: 60px;
-    border: 1px solid #000;
-    width: 400px;
-    height: 300px;
+    // width: 400px;
+    // height: 300px;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     color: @lightWords;
     position: relative;
@@ -141,6 +126,7 @@ export default {
     }
     
 }
+// 箭头动画
 @jump: 3px;
 @keyframes jump-up {
     0% {

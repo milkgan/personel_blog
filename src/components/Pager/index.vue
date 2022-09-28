@@ -92,7 +92,6 @@ export default {
 <style lang="less" scoped>
 @import "~@/styles/var.less";
 .pager-container {
-  border: 1px solid #000;
   text-align: center;
   color: @primary;
   

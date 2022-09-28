@@ -7,13 +7,20 @@ import router from './router';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
+import showMessgae from "@/utils/showMessage";
+Vue.prototype.$showMessgae = showMessgae;
+
 Vue.use(ElementUI);
 
 Vue.config.productionTip = false
 
 
-import getComp from "../src/utils/getComponentRootDom";
-Vue.prototype.$getComp = getComp;
+// import getComp from "../src/utils/getComponentRootDom";
+// Vue.prototype.$getComp = getComp;
+
+// 注册全局指令
+import vLoading from "@/directives/loading";
+Vue.directive("loading", vLoading)
 
 new Vue({
   render: h => h(App),

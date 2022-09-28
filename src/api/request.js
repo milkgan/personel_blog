@@ -4,9 +4,12 @@ import showMessgae from "@/utils/showMessage";
 const instance = axios.create();
 
 instance.interceptors.response.use(function (res) {
-    console.log(res.data.code)
     if(res.data.code !== 0) {
-        return showMessgae()
+        showMessgae({
+            content: res.data.msg,
+            type: "error"
+        });
+        return [];
     }else {
         return res.data.data;
     }
