@@ -1,11 +1,11 @@
 <template>
   <div class="test-container">
     <Layout>
-      <!-- <template slot="left">
+      <!-- <template #left>
         <SiteAside />
       </template> -->
       <router-view></router-view>
-      <!-- <template slot="right">
+      <!-- <template #right>
         <div>123</div>
       </template> -->
     </Layout>

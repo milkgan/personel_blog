@@ -4,6 +4,7 @@ const Blog = () => import('@/views/Blog');
 const About = () => import('@/views/About');
 const Project = () => import('@/views/Project');
 const Message = () => import('@/views/Message');
+const Detail = () => import('@/views/Blog/Detail');
 
 
 export default [
@@ -18,9 +19,14 @@ export default [
         component: Blog
     },
     {
-        name: "CategoryBlog",
+        name: "BlogCategory",
         path: "/article/cate/:categoryId",
         component: Blog
+    },
+    {
+        name: "BlogDetail",
+        path: "/article/:id",
+        component: Detail
     },
     {
         name: "About",

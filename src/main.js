@@ -26,3 +26,10 @@ new Vue({
   render: h => h(App),
   router
 }).$mount('#app')
+
+// import {getBlogCategories} from "@/api/blog";
+// async function test() {
+//   const a = await getBlogCategories();
+//   console.log(a)
+// }
+// test()

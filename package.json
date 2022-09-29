@@ -14,12 +14,14 @@
     "test:Contact": "vue serve ./src/components/SiteAside/Contact/test.vue",
     "test:Menu": "vue serve ./src/components/SiteAside/Menu/test.vue",
     "test:SiteAside": "vue serve ./src/components/SiteAside/test.vue",
-    "test:Layout": "vue serve ./src/components/Layout/test.vue"
+    "test:Layout": "vue serve ./src/components/Layout/test.vue",
+    "test:RightList": "vue serve ./src/views/Blog/components/RightList-test.vue"
   },
   "dependencies": {
     "axios": "^0.27.2",
     "core-js": "^3.25.2",
     "element-ui": "^2.15.10",
+    "highlight.js": "^11.6.0",
     "mockjs": "^1.1.0",
     "querystring": "^0.2.1",
     "vue": "^2.6.11",

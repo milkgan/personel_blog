@@ -1,4 +1,5 @@
 <template>
+    <!-- 文章列表组件 -->
     <div class="blog-list-conatiner" v-loading="isLoading">
         <!-- 文章列表 -->
         <div class="blog-list">
@@ -19,10 +20,8 @@
                 </div>
             </div>
         </div>
-        {{data.total}}
         <!-- 分页器 -->
         <Pager v-if="data.total" :current="routeInfo.page" :total="data.total" :limit="routeInfo.limit" @pageChange="handlePageChange"/>
-
     </div>
 </template>
 
@@ -34,9 +33,6 @@ import { formatDate } from '@/utils';
 export default {
     components: {Pager},
     mixins:[fetchData({})],
-    mounted() {
-        console.log(this.$route)
-    },
     computed: {
         // 路由信息
         routeInfo() {
@@ -75,7 +71,7 @@ export default {
             }else {
                 // 对应分类跳转
                 this.$router.push({
-                    name: "CategoryBlog",
+                    name: "BlogCategory",
                     query,
                     params: {
                         categoryId
