@@ -35,7 +35,6 @@ export default {
     methods: {
         /* 获取文章详情数据（因为详情和目录组件都需要用到data，所以在父组件这里进行data的获取） */
         async fetchData() {
-            console.log(await getBlog(this.blogId))
             return await getBlog(this.blogId);
         }
     }

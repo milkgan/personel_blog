@@ -1,9 +1,9 @@
 <template>
   <div class="test-container">
     <Layout>
-      <!-- <template #left>
+      <template #left>
         <SiteAside />
-      </template> -->
+      </template>
       <router-view></router-view>
       <!-- <template #right>
         <div>123</div>
@@ -16,11 +16,11 @@
 // 布局组件
 import Layout from "@/components/Layout";
 // 网站侧边栏组件
-// import SiteAside from "@/components/SiteAside";
+import SiteAside from "@/components/SiteAside";
 export default {
   components: {
     Layout,
-    // SiteAside,
+    SiteAside,
   },
 };
 </script>
