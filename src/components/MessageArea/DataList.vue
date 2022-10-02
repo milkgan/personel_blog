@@ -1,4 +1,5 @@
 <template>
+<!-- 评论列表组件 -->
     <ul class="data-list-container">
         <li v-for="(item, i) in list" :key="i">
             <Avatar url="http://mdrs.yuanjin.tech/FgMwAPYq17So9nwVH44ltDHo7u3c" :size="50" />
@@ -25,10 +26,6 @@
             type: Array,
             default: () => []
         }
-    },
-    mounted() {
-        console.log('=====')
-        console.log(this.list)
     },
     methods: {
         formatDate

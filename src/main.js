@@ -7,8 +7,8 @@ import router from './router';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
-import showMessgae from "@/utils/showMessage";
-Vue.prototype.$showMessgae = showMessgae;
+import showMessage from "@/utils/showMessage";
+Vue.prototype.$showMessage = showMessage;
 
 Vue.use(ElementUI);
 

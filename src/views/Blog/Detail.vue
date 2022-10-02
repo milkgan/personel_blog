@@ -2,8 +2,8 @@
   <div class="detail-container">
     <Layout>
         <div class="main-container">
-            <!-- <BlogDetail v-if="data" :blog="data" /> -->
-            <BlogComment />
+            <BlogDetail v-if="data" :blog="data" />
+            <BlogComment v-if="!isLoading" />
         </div>
       
       
@@ -16,7 +16,7 @@
 import fetchData from "@/mixins/fetchData";
 import { getBlog } from "@/api/blog";
 import Layout from "@/components/Layout";
-// import BlogDetail from "@/views/Blog/components/BlogDetail";
+import BlogDetail from "@/views/Blog/components/BlogDetail";
 import BlogComment from '@/views/Blog/components/BlogComment';
 
 
@@ -24,7 +24,7 @@ export default {
     mixins: [fetchData(null)],// 传入null，这样v-if="data"的判断才会生效
     components: {
         Layout,
-        // BlogDetail,
+        BlogDetail,
         BlogComment
     },
     computed: {
