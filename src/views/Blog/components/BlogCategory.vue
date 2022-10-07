@@ -1,6 +1,6 @@
 <template>
   <!-- 文章分类组件 -->
-  <div class="blog-category-container">
+  <div class="blog-category-container" v-loading="isLoading">
     <h3>文章分类</h3>
     <RightList :list="list" @select="handleSelect" />
   </div>
@@ -75,6 +75,7 @@ export default {
 .blog-category-container {
   width: 300px;
   height: 100%;
+  position: relative;
   overflow-y: auto;
   h3 {
     text-align: center;

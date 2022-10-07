@@ -9,6 +9,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 
 import showMessage from "@/utils/showMessage";
 Vue.prototype.$showMessage = showMessage;
+Vue.prototype.$bus = new Vue({});
 
 Vue.use(ElementUI);
 

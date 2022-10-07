@@ -3,9 +3,10 @@
   <ul class="right-list-container">
     <li v-for="(item, i) in list" :key="i">
       <div
+        class="title"
         @click="handleSelect(item)"
         :class="{ active: item.isSelect }"
-        class="title"
+       
       >
         <span>{{ item.name }}</span>
         <span class="title-aside" v-if="item.aside">({{ item.aside }})</span>
@@ -40,7 +41,7 @@ export default {
 <style lang="less" scoped>
 @import "~@/styles/var.less";
 .right-list-container {
-  margin: 0;
+  margin: 0 20px;
   padding: 0;
   list-style: none;
   font-size: 16px;
@@ -48,7 +49,7 @@ export default {
     margin-top: 8px;
     cursor: pointer;
     .title {
-      padding: 8px 20px;
+      padding: 8px;
       color: @words;
       font-size: 16px;
       line-height: 16px;

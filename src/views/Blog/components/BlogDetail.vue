@@ -5,7 +5,7 @@
     <div class="aside">
       <span>日期：{{ formatDate(blog.createDate) }}</span>
       <span>浏览量：{{ blog.scanNumber }}</span>
-      <span>评论：{{ blog.commentNumber }}</span>
+      <!-- <span>评论：{{ blog.commentNumber }}</span> -->
       <router-link
         :to="{ name: 'BlogCategory', params: { categoryId: blog.category.id } }"
       >
@@ -19,6 +19,7 @@
 <script>
 import { formatDate } from "@/utils";
 import "highlight.js/styles/github.css";
+import "@/styles/markdown.css";
 export default {
   props: {
     blog: {
@@ -34,12 +35,6 @@ export default {
 
 <style lang="less" scoped>
 @import "~@/styles/var.less";
-.blog-detail-contianer {
-//   width: 100%;
-//   height: 100%;
-//   overflow-y: auto;
-//   overflow-x: hidden;
-}
 .title {
   text-align: center;
 }

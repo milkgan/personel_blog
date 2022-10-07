@@ -16,7 +16,6 @@ export default {
     },
     methods: {
         async fetchData() {
-            console.log(await getComments())
             return await getComments();
         },
         async handleSubmit(commentInfo, callback) {
@@ -24,7 +23,6 @@ export default {
                 blogId: this.$route.params.id,
                 ...commentInfo
             });
-            console.log(res)
             this.data.rows.unshift(res);
             this.data.total++;
             callback("评论成功啦");
