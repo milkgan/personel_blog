@@ -1,11 +1,11 @@
 <template>
     <div class="site-aside-container">
-        <div class="self">
-            <Avatar :url="img_url" />
+        <div class="self" v-if="data">
+            <Avatar :url="data.avatar" />
             <h1>self name</h1>
         </div>
         <Menu />
-        <Contact />
+        <Contact v-if="data" />
     </div>
 </template>
 
@@ -13,17 +13,14 @@
 import Avatar from "@/components/Avatar";
 import Menu from "./Menu"; 
 import Contact from "./Contact"; 
+import { mapState } from "vuex";
 export default {
     components: {
         Avatar,
         Menu,
         Contact
     },
-    data() {
-        return {
-            img_url: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg9.doubanio.com%2Fview%2Frichtext%2Flarge%2Fpublic%2Fp163720566.jpg&refer=http%3A%2F%2Fimg9.doubanio.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1666516250&t=7a29439a903d845a6e04d6d756bf01ef'
-        }
-    }
+    computed: mapState("setting", ["data"])
 }
 </script>
 

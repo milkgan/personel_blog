@@ -75,6 +75,7 @@ export default {
     box-sizing: border-box;
     overflow-y: auto;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 .right-container {
     width: 300px;

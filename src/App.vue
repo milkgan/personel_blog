@@ -2,7 +2,9 @@
   <div class="test-container">
     <Layout>
       <template #left>
-        <SiteAside />
+        <div class="aside">
+          <SiteAside />
+        </div> 
       </template>
       <router-view></router-view>
       <!-- <template #right>
@@ -33,6 +35,10 @@ body {
   height: 100%;
 }
 .test-container {
+  height: 100%;
+}
+.aside {
+  width: 250px;
   height: 100%;
 }
 </style>

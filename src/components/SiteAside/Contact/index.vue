@@ -2,20 +2,20 @@
     <ul class="contact-container">
         <li>
             <Icon type="github" />
-            <a href="https://github.com/milkgan" target="_blank">https://github.com/milkgan</a>
+            <a :href="data.github" target="_blank">{{ data.github }}</a>
         </li>
         <li>
             <Icon type="mail" />
-            <a href="mailto:394717060@qq.com">666666666@qq.com</a>
+            <a :href="`mailto:${data.mail}`">{{ data.mail }}</a>
             <div></div>
         </li>
         <li>
             <Icon type="qq" />
-            <div>666666666</div>
+            <div>{{ data.qq }}</div>
         </li>
         <li>
             <Icon type="weixin" />
-            <div>milkgan</div>
+            <div>{{ data.weixin }}</div>
         </li>
     </ul>
     
@@ -23,10 +23,12 @@
 
 <script>
 import Icon from "@/components/Icon";
+import { mapState } from "vuex";
 export default {
     components: {
         Icon
-    }
+    },
+    computed: mapState("setting", ["data"])
     
 }
 </script>

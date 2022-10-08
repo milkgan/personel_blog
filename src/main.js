@@ -3,15 +3,13 @@ import App from './App.vue';
 import "./styles/global.less";
 import "./mock";
 import router from './router';
-
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+import store from './store';
+store.dispatch("setting/fetchSetting");
 
 import showMessage from "@/utils/showMessage";
 Vue.prototype.$showMessage = showMessage;
 Vue.prototype.$bus = new Vue({});
 
-Vue.use(ElementUI);
 
 Vue.config.productionTip = false
 
@@ -25,7 +23,8 @@ Vue.directive("loading", vLoading)
 
 new Vue({
   render: h => h(App),
-  router
+  router,
+  store
 }).$mount('#app')
 
 // import {getBlogCategories} from "@/api/blog";
