@@ -31,24 +31,24 @@ export default {
           icon: "blog",
           exact: false,
         },
-        {
-          name: "About",
-          title: "关于我",
-          icon: "about",
-          exact: true,
-        },
+        // {
+        //   name: "About",
+        //   title: "关于我",
+        //   icon: "about",
+        //   exact: true,
+        // },
         {
           name: "Project",
           title: "项目&效果",
           icon: "code",
           exact: true,
         },
-        {
-          name: "Message",
-          title: "留言板",
-          icon: "chat",
-          exact: true,
-        },
+        // {
+        //   name: "Message",
+        //   title: "留言板",
+        //   icon: "chat",
+        //   exact: true,
+        // },
       ],
     };
   },

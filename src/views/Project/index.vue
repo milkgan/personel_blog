@@ -1,5 +1,5 @@
 <template>
-    <div class="project-container">
+    <div class="project-container" v-loading="isLoading">
         <div class="project-item" v-for="item in data" :key="item.id">
             <a :href="item.url ? item.url : `javascript:alert('该项目暂时无法通过外网访问')`" :target="item.url ? `_blank` : `_self`">
                 <img class="thumb" :src="item.thumb" :alt="item.name">
